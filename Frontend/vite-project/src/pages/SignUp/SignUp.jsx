@@ -90,7 +90,7 @@ const SignUp = () => {
                 selectedGender={input.gender}
               />
               <Link
-                to="http://localhost:5000/login"
+                to="https://newchatapplicationfordeploy.onrender.com/login"
                 className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block"
               >
                 Already have an Account
