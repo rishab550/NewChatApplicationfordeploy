@@ -33,7 +33,7 @@ app.use("/api/v1/messages", messageRouter);
 app.use("/api/v1/active-users", activeUserRouter);
 app.get("*", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "frontend", "vite-project", "dist", "index.html"),
+    path.join(__dirname, "Frontend", "vite-project", "dist", "index.html"),
   );
 });
 
