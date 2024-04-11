@@ -18,7 +18,11 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static("public"));
 app.use(cookieParser());
 
-app.use(express.static(path.join(__dirname, "/frontend/vite-project/dist")));
+app.use(
+  express.static(path.join(__dirname, "/frontend/vite-project/dist"), {
+    extensions: ["js"],
+  }),
+);
 
 // routes import
 
