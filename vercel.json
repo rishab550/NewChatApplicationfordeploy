@@ -1,10 +1,10 @@
 {
   "builds": [
     {
-      "src": "frontend/vite-project/package.json",
+      "src": "Frontend/vite-project/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "frontend/vite-project/dist"
+        "distDir": "Frontend/vite-project/dist"
       }
     }
   ]
