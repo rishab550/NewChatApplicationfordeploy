@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "backend": "file:.."
+  },
+  "scripts": {
+    "build": "npm --prefix vite-project run build"
   }
 }

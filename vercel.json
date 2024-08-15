@@ -7,5 +7,11 @@
         "distDir": "Frontend/vite-project/dist"
       }
     }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "Frontend/vite-project/dist/$1"
+    }
   ]
 }
