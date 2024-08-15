@@ -8,7 +8,7 @@ const __dirname = path.resolve();
 
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN,
+    origin: "https://newchatapplicationfordeploy.onrender.com",
     credentials: true,
   }),
 );
