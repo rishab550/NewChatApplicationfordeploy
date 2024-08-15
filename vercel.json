@@ -5,14 +5,8 @@
       "src": "frontend/vite-project/vite.config.js",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "frontend/vite-project/dist"  
+        "distDir": "frontend/vite-project/dist"
       }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "frontend/vite-project/dist/$1"
     }
   ]
 }
