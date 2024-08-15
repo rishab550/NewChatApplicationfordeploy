@@ -10,6 +10,12 @@ const activeUsers = asyncHandler(async (req, res) => {
     _id: { $ne: loggedInUserId },
   }).select("-password");
 
+  if (!filteredUsers) {
+    return res.status(400).json({
+      error: "something went wrong",
+    });
+  }
+
   // const filteredUsers = await User.find().select("-password -refreshToken");
 
   return res

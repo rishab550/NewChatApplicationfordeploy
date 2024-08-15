@@ -23,15 +23,18 @@ export const SocketContextProvider = ({ children }) => {
       });
 
       setSocket(socket);
+      console.log(socket);
 
       socket.on("getOnlineUsers", (users) => {
         setOnlineUsers(users);
+        console.log(users);
       });
       return () => socket.close();
     } else {
       if (socket) {
         socket.close();
         setSocket(null);
+        console.log("null value for socket");
       }
     }
   }, [authUser]);

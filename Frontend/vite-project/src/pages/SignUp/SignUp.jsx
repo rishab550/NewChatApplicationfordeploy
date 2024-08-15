@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Genderchecckbox from "./Genderchecckbox";
 import { Link } from "react-router-dom";
 import useSignUp from "../../hooks/useSignUp.js";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [input, setInputs] = useState({
@@ -11,6 +12,7 @@ const SignUp = () => {
     email: "",
     gender: "",
   });
+  const navigate = useNavigate();
 
   const { loading, signup } = useSignUp();
   const handleCheckBox = (gender) => {
@@ -23,6 +25,7 @@ const SignUp = () => {
     await signup(fullname, username, password, email, gender);
     // setInputs(input);
     console.log(input, "button clicked");
+    navigate("/login");
   };
   return (
     <>
